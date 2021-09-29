@@ -1,5 +1,7 @@
 package de.tum.in.ase.eist;
 
+import java.util.Map;
+
 public class Group {
 
     private final PasswordAuthentication passwordAuthentication;
@@ -8,7 +10,7 @@ public class Group {
         this.passwordAuthentication = new PasswordAuthentication();
     }
 
-    public boolean checkLogin(String loginName, LoginRequest request) {
+    public boolean checkLogin(String loginName, Map<LoginRequestType, String> request) {
         return passwordAuthentication.authenticate(loginName, request);
     }
 }

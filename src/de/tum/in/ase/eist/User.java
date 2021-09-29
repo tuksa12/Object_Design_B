@@ -1,5 +1,7 @@
 package de.tum.in.ase.eist;
 
+import java.util.Map;
+
 public class User {
 
     private final String name;
@@ -11,8 +13,8 @@ public class User {
         this.group = group;
     }
 
-    public boolean login(LoginRequest request) {
-        return group.checkLogin(name, request);
+    public boolean login(Map<LoginRequestType, String> loginRequest) {
+        return group.checkLogin(name, loginRequest);
     }
 
     public String getName() {
