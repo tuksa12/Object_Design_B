@@ -6,9 +6,9 @@ public class Artemis {
 
     // TODO add configuration and use specialized groups
 
-    private static final Group administratorGroup = new Group();
-    private static final Group instructorGroup = new Group();
-    private static final Group studentGroup = new Group();
+    public static final Group administratorGroup = new Group();
+    public static final Group instructorGroup = new Group();
+    public static final Group studentGroup = new Group();
 
     public static void main(String[] args) {
         User chris = new User("chris", studentGroup);
