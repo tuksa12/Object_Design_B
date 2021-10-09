@@ -2,9 +2,9 @@ package de.tum.in.ase.eist;
 
 import java.util.Map;
 
-public class CertificateAuthentication {
+public class BiometricAuthentication {
 
-    public boolean authenticate(String loginName, Map<LoginRequestType, String> loginRequest) {
+    public boolean login(String loginName, Map<LoginRequestType, String> loginRequest) {
         String signature = loginRequest.get(LoginRequestType.SIGNATURE);
         System.out.println("Logging in " + loginName);
         if (signature == null || signature.isBlank()) {
@@ -12,7 +12,7 @@ public class CertificateAuthentication {
             System.out.println();
             return false;
         }
-        System.out.println("Checking if the signature is a valid of the stored certificate...");
+        System.out.println("Checking if the handwritten signature is a valid of the stored user...");
         System.out.println(">> Success!");
         System.out.println();
         return true;

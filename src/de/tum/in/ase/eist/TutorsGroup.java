@@ -1,5 +1,5 @@
 package de.tum.in.ase.eist;
 
-public class InstructorGroup {
+public class TutorsGroup {
     // TODO
 }

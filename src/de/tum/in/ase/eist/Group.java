@@ -4,13 +4,13 @@ import java.util.Map;
 
 public class Group {
 
-    private final PasswordAuthentication passwordAuthentication;
+    private final GoogleAuthentication googleAuthentication;
 
     public Group() {
-        this.passwordAuthentication = new PasswordAuthentication();
+        this.googleAuthentication = new GoogleAuthentication();
     }
 
     public boolean checkLogin(String loginName, Map<LoginRequestType, String> request) {
-        return passwordAuthentication.authenticate(loginName, request);
+        return googleAuthentication.login(loginName, request);
     }
 }
