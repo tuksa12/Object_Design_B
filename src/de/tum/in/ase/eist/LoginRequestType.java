@@ -1,5 +1,5 @@
 package de.tum.in.ase.eist;
 
 public enum LoginRequestType {
-    SIGNATURE, TOKEN
+    SIGNATURE, OAUTH_TOKEN
 }

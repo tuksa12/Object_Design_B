@@ -2,10 +2,10 @@ package de.tum.in.ase.eist;
 
 import java.util.Map;
 
-public class GoogleAuthentication {
+public class OAuthAuthentication {
 
     public boolean login(String loginName, Map<LoginRequestType, String> loginRequest) {
-        String token = loginRequest.get(LoginRequestType.TOKEN);
+        String token = loginRequest.get(LoginRequestType.OAUTH_TOKEN);
         System.out.println("Logging in " + loginName);
         if (token == null || token.isEmpty()) {
             System.out.println(">> Failure!");
