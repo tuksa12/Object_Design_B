@@ -5,10 +5,11 @@ import java.util.Map;
 public class Artemis {
 
     // TODO add configuration and use specialized groups
+    public BiometricAuthentication authenticationMethod = new BiometricAuthentication();
 
-    public static final Group administratorGroup = new Group();
-    public static final Group editorGroup = new Group();
-    public static final Group tutorsGroup = new Group();
+    public static final Group administratorGroup = new AdministratorGroup();
+    public static final Group editorGroup = new EditorGroup();
+    public static final Group tutorsGroup = new TutorsGroup();
 
     public static void main(String[] args) {
         User chris = new User("chris", editorGroup);
